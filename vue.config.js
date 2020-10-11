@@ -1,3 +1,14 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false，
+devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://182.92.128.115',
+        changeOrigin: true,
+        // pathRewrite: {
+        //   '^/api': '',
+        // },
+      },
+    },
+  },
 }
